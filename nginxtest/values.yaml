@@ -5,12 +5,12 @@
 replicaCount: 1
 
 image:
-  repository: gcr.io/int-devops-cloud-0423/nginxtst
+  repository: us-central1-docker.pkg.dev/int-devops-cloud-0423/test-spinnaker/nginxtst
   pullPolicy: Always
   # Overrides the image tag whose default is the chart appVersion.
   tag: "latest"
 
-imagePullSecrets: []
+imagePullSecrets: [{name: testsecret}]
 nameOverride: "nginxtest-app"
 fullnameOverride: "nginxtest-chart"
 
