@@ -8,7 +8,7 @@ image:
   repository: us-central1-docker.pkg.dev/int-devops-cloud-0423/test-spinnaker/nginxtst
   pullPolicy: Always
   # Overrides the image tag whose default is the chart appVersion.
-  tag: "latest"
+  tag: "${parameters.version}"
 
 imagePullSecrets: [{name: testsecret}]
 nameOverride: "nginxtest-app"
