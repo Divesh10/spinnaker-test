@@ -3,7 +3,8 @@ kind: Service
 metadata:
   name: {{ include "nginxtest.fullname" . }}
   labels:
-    {{- include "nginxtest.labels" . | nindent 4 }}
+    myapp: nginxapp
+    environment: test
 spec:
   type: {{ .Values.service.type }}
   ports:
