@@ -15,4 +15,3 @@ spec:
   selector:
     myapp: nginxapp
     environment: test
-    version: ${parameters.version} 
