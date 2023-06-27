@@ -34,7 +34,7 @@ spec:
         - name: {{ .Chart.Name }}
           securityContext:
             {{- toYaml .Values.securityContext | nindent 12 }}
-          image: "us-central1-docker.pkg.dev/int-devops-cloud-0423/test-spinnaker/nginxtst:${parameters.version}"
+          image: 'us-central1-docker.pkg.dev/int-devops-cloud-0423/test-spinnaker/nginxtst:${parameters.version}'
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           ports:
             - name: http
