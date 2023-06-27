@@ -3,7 +3,8 @@ kind: Deployment
 metadata:
   name: {{ include "nginxtest.fullname" . }}
   labels:
-    {{- include "nginxtest.labels" . | nindent 4 }}
+    app: nginx
+    env: dev
 spec:
   {{- if not .Values.autoscaling.enabled }}
   replicas: {{ .Values.replicaCount }}
@@ -19,7 +20,8 @@ spec:
         {{- toYaml . | nindent 8 }}
       {{- end }}
       labels:
-        {{- include "nginxtest.selectorLabels" . | nindent 8 }}
+        app: nginx
+        env: dev
     spec:
       {{- with .Values.imagePullSecrets }}
       imagePullSecrets:
