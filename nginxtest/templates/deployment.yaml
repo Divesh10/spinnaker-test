@@ -10,7 +10,8 @@ spec:
   {{- end }}
   selector:
     matchLabels:
-      {{- include "nginxtest.selectorLabels" . | nindent 6 }}
+      app: nginx
+      env: dev
   template:
     metadata:
       {{- with .Values.podAnnotations }}
