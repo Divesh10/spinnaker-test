@@ -15,4 +15,4 @@ spec:
   selector:
     myapp: nginxapp
     environment: test
-    release: blue
+    release: ${parameters.release}
