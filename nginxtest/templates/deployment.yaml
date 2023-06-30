@@ -3,16 +3,16 @@ kind: ReplicaSet
 metadata:
   name: {{ include "nginxtest.fullname" . }}
   labels:
-    app: nginx
-    env: dev
+    app: newnginx
+    envname: dev
 spec:
   {{- if not .Values.autoscaling.enabled }}
   replicas: {{ .Values.replicaCount }}
   {{- end }}
   selector:
     matchLabels:
-      app: nginx
-      env: dev
+      app: newnginx
+      envname: dev
   template:
     metadata:
       {{- with .Values.podAnnotations }}
