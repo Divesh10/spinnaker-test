@@ -13,5 +13,5 @@ spec:
       protocol: TCP
       name: http
   selector:
-    myapp: nginxapp
-    environment: test
+    newapp: newnginxapp
+    patch: {{ .Values.imagetag }}
