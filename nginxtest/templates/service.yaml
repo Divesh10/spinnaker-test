@@ -15,4 +15,4 @@ spec:
   selector:
     myapp: nginxapp
     environment: test
-    release: green
+    release: {{ .Values.releasename }}

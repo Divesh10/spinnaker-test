@@ -3,7 +3,7 @@
 # Declare variables to be passed into your templates.
 
 replicaCount: 1
-
+releasename: green
 image:
   repository: us-central1-docker.pkg.dev/int-devops-cloud-0423/test-spinnaker/nginxtst
   pullPolicy: Always
