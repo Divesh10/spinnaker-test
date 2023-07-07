@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: ReplicaSet
 metadata:
-  name: {{ include "nginxtest.fullname" . }}
+  name: nginxchart
   labels:
     app: newnginx
     envname: dev
